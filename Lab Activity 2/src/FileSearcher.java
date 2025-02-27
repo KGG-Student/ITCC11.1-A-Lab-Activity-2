@@ -39,7 +39,7 @@ public class FileSearcher {
         }
     }
 
-    // Method to save results to file
+  
     void saveResultsToFile() {
         try (FileWriter writer = new FileWriter("search_results.txt")) {
             for (String result : results) {
