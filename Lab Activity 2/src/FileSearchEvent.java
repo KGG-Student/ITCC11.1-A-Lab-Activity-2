@@ -1,4 +1,4 @@
-class FileSearchEvent {
+public class FileSearchEvent {
     private final String filePath;
 
     FileSearchEvent(String filePath) {
