@@ -1,4 +1,4 @@
-public interface FileSearchListener {
+ interface FileSearchListener {
     void onFileFound(FileSearchEvent event);
 }
 
