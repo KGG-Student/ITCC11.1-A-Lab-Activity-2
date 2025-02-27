@@ -16,14 +16,16 @@ public class RecursiveFileSearch {
             if (!directory.exists()) {
                 System.out.print("Directory does not exist. Do you want to create it? (yes/no): ");
                 String createDir = scanner.nextLine();
-                if (createDir.equalsIgnoreCase("yes")) {
-                    if (directory.mkdirs()) {
+            if (createDir.equalsIgnoreCase("yes")) {
+            if (directory.mkdirs()) {
                         System.out.println("Directory created successfully.");
-                    } else {
+                    } 
+            else {
                         System.out.println("Failed to create directory.");
                         return;
                     }
-                } else {
+                } 
+            else {
                     System.out.println("Exiting program.");
                     return;
                 }
