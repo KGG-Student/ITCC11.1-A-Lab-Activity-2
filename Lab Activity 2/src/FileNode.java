@@ -1,5 +1,5 @@
 
-public class FileNode extends FileSysNode {
+class FileNode extends FileSysNode {
     @SuppressWarnings("unused")
     FileNode(String name){
         super(name);
