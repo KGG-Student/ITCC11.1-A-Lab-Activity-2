@@ -16,23 +16,24 @@ public class FileSearcher {
    
     private void triggerEvent(String filePath) {
         FileSearchEvent event = new FileSearchEvent(filePath);
-        for (FileSearchListener listener : listeners) {
+    for (FileSearchListener listener : listeners) {
             listener.onFileFound(event);
         }
     }
 
    
     void searchFiles(File directory, String extension) {
-        if (directory.isDirectory()) {
+    if (directory.isDirectory()) {
         File[] files = directory.listFiles();
-        if (files != null) {
-        for (File file : files) {
+    if (files != null) {
+    for (File file : files) {
         if (file.isDirectory()) {
         searchFiles(file, extension);
-                    } else if (file.getName().endsWith(extension)) {
-                        String filePath = file.getAbsolutePath();
-                        results.add(filePath);
-                        triggerEvent(filePath);
+                    } 
+    else if (file.getName().endsWith(extension)) {
+            String filePath = file.getAbsolutePath();
+            results.add(filePath);
+            triggerEvent(filePath);
                     }
                 }
             }
